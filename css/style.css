@@ -1,0 +1,126 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: #d4ba7e;
+}
+#container
+{
+    height: 600px;
+    width: 1000px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+#start
+{
+    height: 70px;
+    width: 300px;
+    border: none;
+    outline: none;
+    background: #00BCD4;
+    cursor: pointer;
+    border-radius: 20px 5px 40px 5px;
+    font-size: 25px;
+    box-shadow: 2px 2px 5px rgba(63,166,177,95),-2px -2px 5px rgba(0,0,0,0.2);
+}
+#start:hover
+{
+    background: #70c5ce;
+}
+#game
+{
+    height: 600px;
+    width: 1000px;
+    background: #00BCD4;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(63,166,177,95),-2px -2px 5px rgba(0,0,0,0.2);
+    display: none;
+}
+#block
+{
+    height: 100%;
+    width: 50px;
+    background: #73bf2e;
+    position: absolute;
+    right: -60px;
+    box-shadow: 2px 2px 5px rgba(63,166,177,95),-2px -2px 5px rgba(0,0,0,0.2);
+    /* animation: animate 2s linear infinite; */
+    animation: none;
+}
+@keyframes animate{
+    0%{
+        right: -60px;
+    }
+    100%
+    {
+        right: calc(100% + 50px);
+    }
+}
+#gap
+{
+    height: 150px;
+    width: 140%;
+    background: #00BCD4;
+    position: absolute;
+    top: 40%;
+    left: -20%;
+}
+#bird
+{
+    height: 40px;
+    width: 40px;
+    background: #ffa000;
+    position: absolute;
+    left: 200px;
+    top: 20%;
+    border-radius: 50%;
+}
+#gameOver
+{
+    height: 400px;
+    width: 400px;
+    background: #00BCD4;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(63,166,177,95),-2px -2px 5px rgba(0,0,0,0.2);
+    display: none;
+}
+#gameOver #loss
+{
+    font-size: 40px;
+}
+#gameOver #score
+{
+    font-size: 100px;
+    color: #e48f00;
+}
+#gameOver #playAgain
+{
+    height: 60px;
+    width: 200px;
+    border: none;
+    outline: none;
+    background: #ffa000;
+    cursor: pointer;
+    border-radius: 20px 5px 40px 5px;
+    font-size: 27px;
+    box-shadow: 2px 2px 5px rgba(63,166,177,95),-2px -2px 5px rgba(0,0,0,0.2);
+}
+#gameOver #playAgain:hover
+{
+    background: #d4ba7e;
+}
